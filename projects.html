@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Manojkumar — Front-End Developer</title>
+  <meta
+    name="description"
+    content="Browse Manojkumar's portfolio of front-end development and UI/UX design projects, including case studies, live demos, and source code."
+  />
+  <meta name="keywords" content="web development projects, portfolio, React, Next.js, design system, case studies" />
+  <meta name="author" content="Manojkumar" />
+  <link rel="canonical" href="[alexmorgan.dev](https://alexmorgan.dev/projects.html)" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link
+    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap)"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Manojkumar — home">
+        <span aria-hidden="true">MK</span>
+        <span class="logo-text">Manojkumar</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="index.html"    class="nav-link">Home</a></li>
+          <li><a href="about.html"    class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+          <li><a href="contact.html"  class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Page hero -->
+    <section class="page-hero" aria-labelledby="projects-hero-heading">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol role="list">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Projects</li>
+          </ol>
+        </nav>
+        <h1 id="projects-hero-heading">My Projects</h1>
+        <p class="page-hero-subtitle">Case studies, experiments, and open-source contributions</p>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         FILTER BAR
+         Uses ARIA roles for a tab-like filter UI.
+         ───────────────────────────────────────── -->
+    <section class="filter-section" aria-labelledby="filter-label">
+      <div class="container">
+        <h2 id="filter-label" class="sr-only">Filter projects by category</h2>
+
+        <!-- role="tablist" / role="tab" pattern for filter buttons -->
+        <div class="filter-bar" role="tablist" aria-label="Project categories">
+          <button
+            class="filter-btn active"
+            role="tab"
+            aria-selected="true"
+            data-filter="all"
+          >All Projects</button>
+          <button
+            class="filter-btn"
+            role="tab"
+            aria-selected="false"
+            data-filter="frontend"
+          >Front-End</button>
+          <button
+            class="filter-btn"
+            role="tab"
+            aria-selected="false"
+            data-filter="design"
+          >UI/UX Design</button>
+          <button
+            class="filter-btn"
+            role="tab"
+            aria-selected="false"
+            data-filter="fullstack"
+          >Full-Stack</button>
+          <button
+            class="filter-btn"
+            role="tab"
+            aria-selected="false"
+            data-filter="opensource"
+          >Open Source</button>
+        </div>
+
+        <!-- Live region announces filter results to screen readers -->
+        <p
+          id="filter-count"
+          class="filter-count"
+          aria-live="polite"
+          aria-atomic="true"
+        >Showing 5 projects</p>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         PROJECTS GRID
+         Each project is an <article> with a unique
+         id matching the anchor on the home page.
+         ───────────────────────────────────────── -->
+    <section class="projects-section" aria-labelledby="all-projects-heading">
+      <div class="container">
+
+        <h2 id="all-projects-heading" class="sr-only">All Projects</h2>
+
+        <div class="projects-grid full-grid" id="projects-container" role="list">
+
+          <!-- PROJECT 1 ─────── -->
+          <article
+            class="project-card large-card"
+            id="ecotrack"
+            role="listitem"
+            data-category="fullstack"
+            aria-labelledby="p1-title"
+          >
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-1"
+                role="img"
+                aria-label="EcoTrack dashboard: charts showing energy consumption, CO₂ savings, and a dark-themed analytics interface"
+              ></div>
+              <div class="project-overlay" aria-hidden="true">
+                <span class="project-category">Full-Stack</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies: React, Node.js, MongoDB, Chart.js">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Chart.js</span>
+              </div>
+              <h3 id="p1-title" class="project-title">EcoTrack Dashboard</h3>
+              <p class="project-desc">
+                A real-time sustainability analytics platform helping enterprises monitor
+                energy usage, track carbon emissions, and generate compliance reports.
+                Serves 50,000+ users across 18 countries.
+              </p>
+              <!-- Highlights as a list for scannability -->
+              <ul class="project-highlights" aria-label="Project highlights">
+                <li>50k+ active users across 18 countries</li>
+                <li>Lighthouse Performance: 97 / Accessibility: 100</li>
+                <li>WCAG 2.1 Level AA certified</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="[ecotrack.demo.alexmorgan.dev](https://ecotrack.demo.alexmorgan.dev)"
+                  class="btn btn-sm btn-primary"
+                  aria-label="Live demo of EcoTrack Dashboard (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Live Demo ↗</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/ecotrack)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="EcoTrack source code on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 ─────── -->
+          <article
+            class="project-card"
+            id="lexis"
+            role="listitem"
+            data-category="frontend"
+            aria-labelledby="p2-title"
+          >
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-2"
+                role="img"
+                aria-label="Lexis reading app: clean white typography on a soft background with a custom font selector panel"
+              ></div>
+              <div class="project-overlay" aria-hidden="true">
+                <span class="project-category">Front-End</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies: Next.js, TypeScript, Prisma, Service Workers">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Prisma</span>
+              </div>
+              <h3 id="p2-title" class="project-title">Lexis Reading App</h3>
+              <p class="project-desc">
+                An accessible e-reader with OpenDyslexic font support, customisable
+                line spacing, colour overlays, and full offline capability via Service Workers.
+              </p>
+              <ul class="project-highlights" aria-label="Project highlights">
+                <li>100% Lighthouse Accessibility score</li>
+                <li>Works offline — Service Worker + Cache API</li>
+                <li>Dyslexia-friendly design validated with user testing</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="[lexis.demo.alexmorgan.dev](https://lexis.demo.alexmorgan.dev)"
+                  class="btn btn-sm btn-primary"
+                  aria-label="Live demo of Lexis Reading App (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Live Demo ↗</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/lexis)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="Lexis source code on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 ─────── -->
+          <article
+            class="project-card"
+            id="forma"
+            role="listitem"
+            data-category="design"
+            aria-labelledby="p3-title"
+          >
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-3"
+                role="img"
+                aria-label="Forma design system: a Storybook documentation page showing button component variants"
+              ></div>
+              <div class="project-overlay" aria-hidden="true">
+                <span class="project-category">UI/UX Design</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies: Figma, Storybook, CSS Custom Properties, React">
+                <span class="tag">Figma</span>
+                <span class="tag">Storybook</span>
+                <span class="tag">CSS Tokens</span>
+                <span class="tag">React</span>
+              </div>
+              <h3 id="p3-title" class="project-title">Forma Design System</h3>
+              <p class="project-desc">
+                A comprehensive, token-based design system with 80+ components,
+                full dark-mode support, and Storybook documentation. WCAG 2.2 compliant.
+              </p>
+              <ul class="project-highlights" aria-label="Project highlights">
+                <li>80+ accessible React components</li>
+                <li>Adopted by 12 internal product teams</li>
+                <li>Full Figma → code token pipeline</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="[forma.demo.alexmorgan.dev](https://forma.demo.alexmorgan.dev)"
+                  class="btn btn-sm btn-primary"
+                  aria-label="Live Storybook demo of Forma Design System (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >View Docs ↗</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/forma)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="Forma source code on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 ─────── -->
+          <article
+            class="project-card"
+            id="axe-reporter"
+            role="listitem"
+            data-category="opensource"
+            aria-labelledby="p4-title"
+          >
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-4"
+                role="img"
+                aria-label="Axe Reporter: a CLI terminal output showing coloured accessibility violation reports"
+              ></div>
+              <div class="project-overlay" aria-hidden="true">
+                <span class="project-category">Open Source</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies: Node.js, axe-core, CLI, Jest">
+                <span class="tag">Node.js</span>
+                <span class="tag">axe-core</span>
+                <span class="tag">CLI</span>
+              </div>
+              <h3 id="p4-title" class="project-title">axe-reporter CLI</h3>
+              <p class="project-desc">
+                An open-source CLI tool that crawls websites and generates
+                actionable WCAG accessibility reports in JSON, HTML, or Markdown formats.
+              </p>
+              <ul class="project-highlights" aria-label="Project highlights">
+                <li>800+ GitHub stars</li>
+                <li>Integrates with CI/CD pipelines</li>
+                <li>Supports WCAG 2.0, 2.1, and 2.2</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="[npmjs.com](https://www.npmjs.com/package/axe-reporter-cli)"
+                  class="btn btn-sm btn-primary"
+                  aria-label="axe-reporter on npm (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >npm ↗</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/axe-reporter)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="axe-reporter source code on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5 ─────── -->
+          <article
+            class="project-card"
+            id="portfolio"
+            role="listitem"
+            data-category="frontend"
+            aria-labelledby="p5-title"
+          >
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-5"
+                role="img"
+                aria-label="This portfolio website: light-themed homepage with hero section and navigation"
+              ></div>
+              <div class="project-overlay" aria-hidden="true">
+                <span class="project-category">Front-End</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies: HTML5, CSS3, JavaScript, No frameworks">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <h3 id="p5-title" class="project-title">This Portfolio</h3>
+              <p class="project-desc">
+                Fully accessible, no-framework portfolio achieving 100 on all four
+                Lighthouse categories. Built with semantic HTML5, custom CSS, and
+                vanilla JavaScript.
+              </p>
+              <ul class="project-highlights" aria-label="Project highlights">
+                <li>Lighthouse: 100/100/100/100</li>
+                <li>WCAG 2.1 Level AA compliant</li>
+                <li>Zero JavaScript frameworks</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="index.html"
+                  class="btn btn-sm btn-primary"
+                  aria-label="You are viewing the live portfolio now"
+                >You're Here!</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/portfolio)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="Portfolio source code on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.projects-grid -->
+      </div><!-- /.container -->
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Manojkumar — home">
+          <span aria-hidden="true">MK</span>
+          <span class="logo-text">Manojkumar</span>
+        </a>
+        <p class="footer-tagline">Building accessible web experiences, one component at a time.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3 class="footer-section-title">Connect</h3>
+        <ul role="list" class="social-list">
+          <li><a href="[github.com](https://github.com/alexmorgan)"     class="social-link" aria-label="GitHub (opens in new tab)"    target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="[linkedin.com](https://linkedin.com/in/alexmorgan)" class="social-link" aria-label="LinkedIn (opens in new tab)"  target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="[twitter.com](https://twitter.com/alexmorgan_dev)" class="social-link" aria-label="Twitter/X (opens in new tab)" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><small>&copy; <span id="current-year"></span> Manojkumar. All rights reserved.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

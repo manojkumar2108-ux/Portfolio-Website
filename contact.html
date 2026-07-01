@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Manojkumar — Front-End Developer</title>
+  <meta
+    name="description"
+    content="Get in touch with Manojkumar for freelance projects, collaborations, or just to say hello. Fill out the contact form or use direct contact details."
+  />
+  <meta name="keywords" content="contact Manojkumar, hire front-end developer, freelance web development" />
+  <meta name="author" content="Manojkumar" />
+  <link rel="canonical" href="[alexmorgan.dev](https://alexmorgan.dev/contact.html)" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link
+    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap)"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Manojkumar — home">
+        <span aria-hidden="true">MK</span>
+        <span class="logo-text">Manojkumar</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="index.html"    class="nav-link">Home</a></li>
+          <li><a href="about.html"    class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html"  class="nav-link active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="contact-hero-heading">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol role="list">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Contact</li>
+          </ol>
+        </nav>
+        <h1 id="contact-hero-heading">Get In Touch</h1>
+        <p class="page-hero-subtitle">I'd love to hear about your project</p>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         CONTACT LAYOUT — form + info side-by-side
+         ───────────────────────────────────────── -->
+    <section class="contact-section" aria-labelledby="contact-form-heading">
+      <div class="container contact-layout">
+
+        <!-- ═══════════════════════════════════════
+             CONTACT FORM
+             Every input has:
+               • a <label> with matching `for` / `id`
+               • HTML5 validation attributes
+               • descriptive placeholder text
+               • aria-describedby for hint/error text
+             ═══════════════════════════════════════ -->
+        <div class="contact-form-wrap">
+
+          <h2 id="contact-form-heading">Send a Message</h2>
+          <p class="form-intro">
+            Fields marked <abbr title="required" aria-label="required">*</abbr> are required.
+          </p>
+
+          <!--
+            novalidate — we handle validation ourselves in JS for better
+            accessible error messaging; HTML5 native bubbles are not screen
+            reader-friendly. Remove novalidate if you want browser-native UX.
+          -->
+          <form
+            id="contact-form"
+            class="contact-form"
+            novalidate
+            aria-label="Contact form"
+          >
+
+            <!-- ── Full Name ── -->
+            <div class="form-group" id="group-name">
+              <label for="name" class="form-label">
+                Full Name <span class="required" aria-hidden="true">*</span>
+              </label>
+              <!-- aria-describedby links the input to both the hint and error text -->
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Jane Smith"
+                required
+                minlength="2"
+                maxlength="100"
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="name-hint name-error"
+              />
+              <p id="name-hint" class="field-hint">Enter your first and last name.</p>
+              <!-- Error message hidden by default; JS reveals it on validation failure -->
+              <p id="name-error" class="field-error" role="alert" aria-live="polite" hidden>
+                Please enter your full name (at least 2 characters).
+              </p>
+            </div>
+
+            <!-- ── Email ── -->
+            <div class="form-group" id="group-email">
+              <label for="email" class="form-label">
+                Email Address <span class="required" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="jane@example.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-hint email-error"
+              />
+              <p id="email-hint" class="field-hint">We'll never share your email.</p>
+              <p id="email-error" class="field-error" role="alert" aria-live="polite" hidden>
+                Please enter a valid email address (e.g., jane@example.com).
+              </p>
+            </div>
+
+            <!-- ── Phone Number ── -->
+            <div class="form-group" id="group-phone">
+              <label for="phone" class="form-label">
+                Phone Number <span class="optional">(optional)</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="+1 (555) 000-0000"
+                autocomplete="tel"
+                aria-describedby="phone-hint phone-error"
+                pattern="[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{4,10}"
+              />
+              <p id="phone-hint" class="field-hint">Include country code, e.g., +1 for USA.</p>
+              <p id="phone-error" class="field-error" role="alert" aria-live="polite" hidden>
+                Please enter a valid phone number.
+              </p>
+            </div>
+
+            <!-- ── Subject ── -->
+            <div class="form-group" id="group-subject">
+              <label for="subject" class="form-label">
+                Subject <span class="required" aria-hidden="true">*</span>
+              </label>
+              <!--
+                <select> used here to ensure consistent keyboard behaviour.
+                A native select is more accessible than a custom dropdown.
+              -->
+              <select
+                id="subject"
+                name="subject"
+                class="form-input form-select"
+                required
+                aria-required="true"
+                aria-describedby="subject-error"
+              >
+                <option value="" disabled selected>Select a subject…</option>
+                <option value="freelance">Freelance Project</option>
+                <option value="fulltime">Full-Time Opportunity</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="speaking">Speaking Engagement</option>
+                <option value="other">Other</option>
+              </select>
+              <p id="subject-error" class="field-error" role="alert" aria-live="polite" hidden>
+                Please select a subject.
+              </p>
+            </div>
+
+            <!-- ── Message ── -->
+            <div class="form-group" id="group-message">
+              <label for="message" class="form-label">
+                Message <span class="required" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell me about your project, timeline, and budget…"
+                required
+                minlength="20"
+                maxlength="2000"
+                rows="6"
+                aria-required="true"
+                aria-describedby="message-hint message-error"
+              ></textarea>
+              <p id="message-hint" class="field-hint">
+                Minimum 20 characters.
+                <!-- Character counter updated by JS -->
+                <span id="message-count" aria-live="polite" aria-atomic="true"></span>
+              </p>
+              <p id="message-error" class="field-error" role="alert" aria-live="polite" hidden>
+                Please enter a message of at least 20 characters.
+              </p>
+            </div>
+
+            <!-- ── Honeypot field — anti-spam, hidden from real users ── -->
+            <div class="form-group honeypot" aria-hidden="true">
+              <label for="website_url">Leave this field blank</label>
+              <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <!-- ── Submit ── -->
+            <div class="form-group form-submit-group">
+              <button
+                type="submit"
+                class="btn btn-primary btn-submit"
+                id="submit-btn"
+                aria-describedby="form-status"
+              >
+                Send Message
+                <span class="btn-icon" aria-hidden="true">→</span>
+              </button>
+
+              <!-- Accessible status message for screen readers -->
+              <p
+                id="form-status"
+                class="form-status"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              ></p>
+            </div>
+
+          </form>
+        </div><!-- /.contact-form-wrap -->
+
+        <!-- ═══════════════════════════════════════
+             CONTACT INFO SIDEBAR
+             <aside> — supplementary contact details
+             alongside the main form section.
+             ═══════════════════════════════════════ -->
+        <aside class="contact-info" aria-labelledby="contact-info-heading">
+
+          <h2 id="contact-info-heading">Contact Details</h2>
+
+          <!-- Contact detail items using definition lists for semantics -->
+          <dl class="contact-details">
+
+            <div class="contact-detail-item">
+              <dt>
+                <span aria-hidden="true">📧</span> Email
+              </dt>
+              <dd>
+                <a href="mailto:manojkumar210807@gmail.com" class="contact-link">
+                  manojkumar210807@gmail.com
+                </a>
+              </dd>
+            </div>
+
+            <div class="contact-detail-item">
+              <dt>
+                <span aria-hidden="true">📱</span> Phone
+              </dt>
+              <dd>
+                <a href="tel:+14155550142" class="contact-link">
+                  +91 8015885073
+                </a>
+              </dd>
+            </div>
+
+            <div class="contact-detail-item">
+              <dt>
+                <span aria-hidden="true">📍</span> Location
+              </dt>
+              <dd>India</dd>
+             </div>
+
+            <div class="contact-detail-item">
+              <dt>
+                <span aria-hidden="true">🕐</span> Response Time
+              </dt>
+              <dd>Typically within 24 hours on business days</dd>
+            </div>
+
+          </dl>
+
+          <!-- Availability status -->
+          <div class="availability-badge" aria-label="Current availability: open to new projects">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span>Available for new projects</span>
+          </div>
+
+          <!-- Social links in contact sidebar -->
+          <div class="contact-social">
+            <h3 class="contact-social-title">Find me online</h3>
+            <ul role="list" class="social-list inline-social">
+              <li>
+                <a
+                  href="[github.com](https://github.com/alexmorgan)"
+                  class="social-link"
+                  aria-label="Manojkumar on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub</a>
+              </li>
+              <li>
+                <a
+                  href="[linkedin.com](https://linkedin.com/in/alexmorgan)"
+                  class="social-link"
+                  aria-label="Manojkumar on LinkedIn (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >LinkedIn</a>
+              </li>
+              <li>
+                <a
+                  href="[twitter.com](https://twitter.com/alexmorgan_dev)"
+                  class="social-link"
+                  aria-label="Manojkumar on Twitter/X (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Twitter/X</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- FAQ / quick info -->
+          <div class="contact-faq" aria-labelledby="faq-heading">
+            <h3 id="faq-heading" class="contact-faq-title">Frequently Asked</h3>
+            <details>
+              <summary>What types of projects do you take on?</summary>
+              <p>Front-end development, UI/UX design, accessibility audits, and design systems. Minimum engagement: 2 weeks.</p>
+            </details>
+            <details>
+              <summary>Do you work with international clients?</summary>
+              <p>Absolutely — I currently work with clients across the US, EU, and Asia-Pacific.</p>
+            </details>
+            <details>
+              <summary>What's your typical turnaround?</summary>
+              <p>Small projects: 1–2 weeks. Full builds: 4–12 weeks depending on scope.</p>
+            </details>
+          </div>
+
+        </aside><!-- /.contact-info -->
+
+      </div><!-- /.contact-layout -->
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Manojkumar — home">
+          <span aria-hidden="true">MK</span>
+          <span class="logo-text">Manojkumar</span>
+        </a>
+        <p class="footer-tagline">Building accessible web experiences, one component at a time.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3 class="footer-section-title">Connect</h3>
+        <ul role="list" class="social-list">
+          <li><a href="[github.com](https://github.com/alexmorgan)"     class="social-link" aria-label="GitHub (opens in new tab)"    target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="[linkedin.com](https://linkedin.com/in/alexmorgan)" class="social-link" aria-label="LinkedIn (opens in new tab)"  target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="[twitter.com](https://twitter.com/alexmorgan_dev)" class="social-link" aria-label="Twitter/X (opens in new tab)" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><small>&copy; <span id="current-year"></span> Manojkumar. All rights reserved.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

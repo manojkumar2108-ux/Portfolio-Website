@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ROOT ELEMENT
+  lang="en" — declares page language for screen readers and search engines.
+  Required for WCAG 3.1.1 (Language of Page).
+-->
+
+<head>
+  <!-- ═══════════════════════════════════════════
+       META & SEO
+       ═══════════════════════════════════════════ -->
+
+  <!-- charset: tells the browser to decode this file as UTF-8 -->
+  <meta charset="UTF-8" />
+
+  <!-- viewport: makes the layout responsive on all screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO title — unique per page, 50–60 chars ideal -->
+  <title>Manojkumar | Front-End Developer & Designer</title>
+
+  <!-- meta description: shown in search engine result snippets -->
+  <meta
+    name="description"
+    content="Manojkumar is a front-end developer and UI/UX designer crafting accessible, performant web experiences. View projects, skills, and contact info."
+  />
+
+  <!-- meta keywords: secondary SEO signal -->
+  <meta
+    name="keywords"
+    content="front-end developer, UI designer, portfolio, JavaScript, React, accessibility, web development"
+  />
+
+  <!-- author: identifies the creator of the document -->
+  <meta name="author" content="Manojkumar" />
+
+  <!-- Open Graph: controls how this page appears when shared on social media -->
+  <meta property="og:title" content="Manojkumar | Front-End Developer" />
+  <meta
+    property="og:description"
+    content="Accessible, performant web experiences built with modern HTML, CSS, and JavaScript."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="[alexmorgan.dev](https://alexmorgan.dev/)" />
+
+  <!-- Canonical URL: prevents duplicate-content SEO issues -->
+  <link rel="canonical" href="[alexmorgan.dev](https://alexmorgan.dev/)" />
+
+  <!-- Favicon: SVG favicons scale perfectly on all DPIs -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Preconnect: speeds up Google Fonts fetch -->
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link
+    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap)"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       SKIP NAVIGATION LINK
+       Allows keyboard/screen-reader users to jump
+       past the repeated nav directly to content.
+       WCAG 2.4.1 — Bypass Blocks.
+       ═══════════════════════════════════════════ -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════
+       <header>
+       Landmark region containing the site's primary
+       branding and navigation. Screen readers expose
+       this as the "banner" landmark.
+       ═══════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <!-- Logo / site identity -->
+      <a href="index.html" class="logo" aria-label="Manojkumar — home">
+        <span aria-hidden="true">MK</span>
+        <span class="logo-text">Manojkumar</span>
+      </a>
+
+      <!-- ═══════════════════════════════════════
+           <nav>
+           Primary navigation landmark.
+           aria-label distinguishes this nav from
+           any other <nav> elements on the page.
+           ═══════════════════════════════════════ -->
+      <nav class="primary-nav" aria-label="Primary navigation">
+
+        <!-- Hamburger button — visible on mobile only -->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <!-- Three decorative bars rendered via CSS; hidden from AT -->
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+        </button>
+
+        <!-- Navigation list -->
+        <ul id="nav-menu" class="nav-list" role="list">
+          <!-- aria-current="page" marks the active link for screen readers -->
+          <li><a href="index.html"    class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="about.html"    class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html"  class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Dark-mode toggle -->
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Switch to dark mode"
+        aria-pressed="false"
+      >
+        <!-- Sun/moon icons rendered via CSS pseudo-elements -->
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+
+    </div><!-- /.container -->
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       <main>
+       The primary content of the document.
+       Only ONE <main> per page. Landmark role
+       "main" — screen readers can jump here directly.
+       id="main-content" is the skip-link target.
+       ═══════════════════════════════════════════ -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ─────────────────────────────────────────
+         HERO SECTION
+         <section> groups thematically related content.
+         aria-labelledby ties the section to its heading
+         so screen readers announce "Hero, region" with
+         the heading text as the label.
+         ───────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+
+        <div class="hero-text">
+          <!-- H1: one per page, the most important heading -->
+          <h1 id="hero-heading" class="hero-title">
+            Hi, I'm <span class="highlight">Manojkumar</span>
+          </h1>
+
+          <!-- H2 subordinate to H1 — describes role/speciality -->
+          <h2 class="hero-subtitle">Front-End Developer &amp; UI/UX Designer</h2>
+
+          <p class="hero-description">
+            I craft accessible, pixel-perfect web experiences that delight users
+            and perform at scale. Based in India, available worldwide. 
+          </p>
+
+          <!-- CTA buttons -->
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html"  class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+
+        <!-- Decorative illustration — alt="" because it adds no information -->
+        <div class="hero-image" aria-hidden="true">
+          <div class="avatar-placeholder" role="img" aria-label="Illustrated portrait of Manojkumar">
+            <!-- SVG Avatar placeholder -->
+            <svg viewBox="0 0 200 200" xmlns="[w3.org](http://www.w3.org/2000/svg)" aria-hidden="true" focusable="false">
+              <circle cx="100" cy="85"  r="45" fill="var(--accent)" opacity="0.2"/>
+              <circle cx="100" cy="75"  r="35" fill="var(--accent)" opacity="0.4"/>
+              <ellipse cx="100" cy="160" rx="55" ry="40" fill="var(--accent)" opacity="0.2"/>
+            </svg>
+          </div>
+        </div>
+
+      </div><!-- /.hero-inner -->
+
+      <!-- Scroll-down indicator -->
+      <a href="#skills" class="scroll-down" aria-label="Scroll down to Skills section">
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section><!-- /.hero -->
+
+    <!-- ─────────────────────────────────────────
+         SKILLS SECTION
+         ───────────────────────────────────────── -->
+    <section class="skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+
+        <h2 id="skills-heading" class="section-title">Skills &amp; Technologies</h2>
+        <p class="section-subtitle">Tools and languages I work with every day</p>
+
+        <!-- Skills grid — uses <article> for each self-contained skill card -->
+        <div class="skills-grid" role="list">
+
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🌐</div>
+            <h3 class="skill-name">HTML5 / CSS3</h3>
+            <p class="skill-desc">Semantic markup, Flexbox, Grid, animations, and WCAG-compliant styling.</p>
+            <!-- Progress bar with accessible label and value -->
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-valuenow="95"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="HTML5/CSS3 proficiency: 95%"
+            >
+              <div class="skill-fill" style="--skill-pct: 95%"></div>
+            </div>
+            <span class="skill-pct">95%</span>
+          </article>
+
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">⚡</div>
+            <h3 class="skill-name">JavaScript (ES2024)</h3>
+            <p class="skill-desc">Async/Await, Modules, Web APIs, and modern patterns like optional chaining.</p>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="JavaScript proficiency: 90%"
+            >
+              <div class="skill-fill" style="--skill-pct: 90%"></div>
+            </div>
+            <span class="skill-pct">90%</span>
+          </article>
+
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">⚛️</div>
+            <h3 class="skill-name">React &amp; Next.js</h3>
+            <p class="skill-desc">Component architecture, hooks, server components, and performance optimisation.</p>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-valuenow="88"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="React and Next.js proficiency: 88%"
+            >
+              <div class="skill-fill" style="--skill-pct: 88%"></div>
+            </div>
+            <span class="skill-pct">88%</span>
+          </article>
+
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🎨</div>
+            <h3 class="skill-name">UI/UX Design</h3>
+            <p class="skill-desc">Figma, design systems, user research, and prototyping for accessible interfaces.</p>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-valuenow="82"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="UI/UX Design proficiency: 82%"
+            >
+              <div class="skill-fill" style="--skill-pct: 82%"></div>
+            </div>
+            <span class="skill-pct">82%</span>
+          </article>
+
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🛠️</div>
+            <h3 class="skill-name">Node.js &amp; APIs</h3>
+            <p class="skill-desc">REST API design, Express, GraphQL, and serverless functions.</p>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-valuenow="78"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="Node.js and APIs proficiency: 78%"
+            >
+              <div class="skill-fill" style="--skill-pct: 78%"></div>
+            </div>
+            <span class="skill-pct">78%</span>
+          </article>
+
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🧪</div>
+            <h3 class="skill-name">Testing &amp; A11y</h3>
+            <p class="skill-desc">Jest, Cypress, axe-core, and WCAG 2.1 Level AA compliance auditing.</p>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-valuenow="85"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-label="Testing and Accessibility proficiency: 85%"
+            >
+              <div class="skill-fill" style="--skill-pct: 85%"></div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </article>
+
+        </div><!-- /.skills-grid -->
+      </div><!-- /.container -->
+    </section><!-- /.skills-section -->
+
+    <!-- ─────────────────────────────────────────
+         FEATURED PROJECTS (teaser on home page)
+         ───────────────────────────────────────── -->
+    <section class="featured-projects" aria-labelledby="fp-heading">
+      <div class="container">
+
+        <h2 id="fp-heading" class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A selection of recent work</p>
+
+        <div class="projects-grid">
+
+          <!-- <article> — self-contained project card -->
+          <article class="project-card" aria-labelledby="proj1-title">
+            <div class="project-image">
+              <!-- role="img" + aria-label for CSS/SVG background images -->
+              <div
+                class="project-img-placeholder proj-img-1"
+                role="img"
+                aria-label="Screenshot of EcoTrack dashboard showing a green analytics interface"
+              ></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+              <h3 id="proj1-title" class="project-title">EcoTrack Dashboard</h3>
+              <p class="project-desc">
+                A real-time sustainability analytics platform helping companies
+                monitor and reduce their carbon footprint with AI-powered insights.
+              </p>
+              <div class="project-links">
+                <a
+                  href="projects.html#ecotrack"
+                  class="btn btn-sm btn-primary"
+                  aria-label="View EcoTrack Dashboard case study"
+                >View Case Study</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/ecotrack)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="EcoTrack on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj2-title">
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-2"
+                role="img"
+                aria-label="Screenshot of Lexis reading app with clean white typography on dark background"
+              ></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Prisma</span>
+              </div>
+              <h3 id="proj2-title" class="project-title">Lexis Reading App</h3>
+              <p class="project-desc">
+                An accessible e-reader with dyslexia-friendly fonts, customisable
+                layouts, and offline support via Service Workers.
+              </p>
+              <div class="project-links">
+                <a
+                  href="projects.html#lexis"
+                  class="btn btn-sm btn-primary"
+                  aria-label="View Lexis Reading App case study"
+                >View Case Study</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/lexis)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="Lexis on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj3-title">
+            <div class="project-image">
+              <div
+                class="project-img-placeholder proj-img-3"
+                role="img"
+                aria-label="Screenshot of Forma design system documentation page"
+              ></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags" aria-label="Technologies used">
+                <span class="tag">Figma</span>
+                <span class="tag">Storybook</span>
+                <span class="tag">CSS Tokens</span>
+              </div>
+              <h3 id="proj3-title" class="project-title">Forma Design System</h3>
+              <p class="project-desc">
+                A comprehensive, WCAG 2.2–compliant design system with 80+ components,
+                dark-mode support, and Storybook documentation.
+              </p>
+              <div class="project-links">
+                <a
+                  href="projects.html#forma"
+                  class="btn btn-sm btn-primary"
+                  aria-label="View Forma Design System case study"
+                >View Case Study</a>
+                <a
+                  href="[github.com](https://github.com/alexmorgan/forma)"
+                  class="btn btn-sm btn-ghost"
+                  aria-label="Forma on GitHub (opens in new tab)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.projects-grid -->
+
+        <div class="view-all-wrap">
+          <a href="projects.html" class="btn btn-outline">View All Projects</a>
+        </div>
+
+      </div><!-- /.container -->
+    </section><!-- /.featured-projects -->
+
+    <!-- ─────────────────────────────────────────
+         TESTIMONIALS / ASIDE
+         <aside> — content tangentially related to
+         the main content; treated as "complementary"
+         landmark by screen readers.
+         ───────────────────────────────────────── -->
+    <aside class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+
+        <h2 id="testimonials-heading" class="section-title">Kind Words</h2>
+
+        <!-- Carousel wrapper with ARIA live region -->
+        <div
+          class="testimonial-slider"
+          aria-roledescription="carousel"
+          aria-label="Client testimonials"
+        >
+          <div class="testimonial-track" aria-live="polite" aria-atomic="false">
+
+            <blockquote class="testimonial-card active" aria-label="Testimonial from Sarah Chen">
+              <p class="testimonial-text">
+                "Manoj delivered a flawless, accessible interface under a tight deadline.
+                The attention to keyboard navigation and screen-reader support was outstanding."
+              </p>
+              <footer class="testimonial-author">
+                <cite>Sarah Chen</cite>
+                <span class="testimonial-role">CTO, GreenWave Technologies</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card" aria-label="Testimonial from Marcus Obi">
+              <p class="testimonial-text">
+                "Working with Manoj transformed our product. The design system reduced
+                our front-end build time by 40% and eliminated our accessibility debt."
+              </p>
+              <footer class="testimonial-author">
+                <cite>Marcus Obi</cite>
+                <span class="testimonial-role">Product Lead, Nexlify</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial-card" aria-label="Testimonial from Priya Nair">
+              <p class="testimonial-text">
+                "Manoj's code is clean, well-documented, and genuinely a pleasure
+                to maintain. Exactly the engineer every team needs."
+              </p>
+              <footer class="testimonial-author">
+                <cite>Priya Nair</cite>
+                <span class="testimonial-role">Engineering Manager, Loopline</span>
+              </footer>
+            </blockquote>
+
+          </div><!-- /.testimonial-track -->
+
+          <!-- Slider controls -->
+          <div class="slider-controls" role="group" aria-label="Carousel controls">
+            <button class="slider-btn" id="prev-btn" aria-label="Previous testimonial">‹</button>
+
+            <!-- Dot indicators -->
+            <div class="slider-dots" role="tablist" aria-label="Select testimonial">
+              <button role="tab" class="dot active" aria-selected="true"  aria-label="Testimonial 1" data-index="0"></button>
+              <button role="tab" class="dot"        aria-selected="false" aria-label="Testimonial 2" data-index="1"></button>
+              <button role="tab" class="dot"        aria-selected="false" aria-label="Testimonial 3" data-index="2"></button>
+            </div>
+
+            <button class="slider-btn" id="next-btn" aria-label="Next testimonial">›</button>
+          </div>
+
+        </div><!-- /.testimonial-slider -->
+      </div><!-- /.container -->
+    </aside><!-- /.testimonials -->
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       <footer>
+       Site-wide footer. role="contentinfo" is the
+       implicit ARIA role — identifies this as the
+       footer landmark to screen readers.
+       ═══════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <!-- Footer brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Manojkumar — home">
+          <span aria-hidden="true">MK</span>
+          <span class="logo-text">Manojkumar</span>
+        </a>
+        <p class="footer-tagline">Building accessible web experiences, one component at a time.</p>
+      </div>
+
+      <!-- Footer navigation -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social media links -->
+      <div class="footer-social">
+        <h3 class="footer-section-title">Connect</h3>
+        <ul role="list" class="social-list">
+          <li>
+            <a
+              href="[github.com](https://github.com/alexmorgan)"
+              class="social-link"
+              aria-label="Manojkumar on GitHub (opens in new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <!-- Inline SVG icon — title provides accessible name -->
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="[linkedin.com](https://linkedin.com/in/alexmorgan)"
+              class="social-link"
+              aria-label="Manojkumar on LinkedIn (opens in new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="[twitter.com](https://twitter.com/alexmorgan_dev)"
+              class="social-link"
+              aria-label="Manojkumar on Twitter/X (opens in new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Twitter/X
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer-inner -->
+
+    <!-- Copyright bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <small>
+            &copy; <span id="current-year"></span> Manojkumar. All rights reserved.
+            Built with ❤️ and semantic HTML.
+          </small>
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Main JavaScript — deferred so it never blocks rendering -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
