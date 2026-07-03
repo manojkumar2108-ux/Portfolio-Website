@@ -1,334 +1,334 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Manojkumar — Front-End Developer</title>
-  <meta
-    name="description"
-    content="Learn about Manojkumar's background, education, work history, and passion for accessible, performant web development."
-  />
-  <meta name="keywords" content="about Manojkumar, developer biography, education, work experience" />
-  <meta name="author" content="Manojkumar" />
-  <link rel="canonical" href="[alexmorgan.dev](https://alexmorgan.dev/about.html)" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Manojkumar — Front-End Developer</title>
+    <meta
+      name="description"
+      content="Learn about Manojkumar's background, education, work history, and passion for accessible, performant web development."
+    />
+    <meta name="keywords" content="about Manojkumar, developer biography, education, work experience" />
+    <meta name="author" content="Manojkumar" />
+    <link rel="canonical" href="[alexmorgan.dev](https://alexmorgan.dev/about.html)" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Shared header (same structure as index.html) -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Manojkumar — home">
-        <span aria-hidden="true">MK</span>
-        <span class="-text">Manojkumar</span>
-      </a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          aria-label="Open navigation menu"
-        >
-          <span class="hamburger-bar" aria-hidden="true"></span>
-          <span class="hamburger-bar" aria-hidden="true"></span>
-          <span class="hamburger-bar" aria-hidden="true"></span>
-        </button>
-        <ul id="nav-menu" class="nav-list" role="list">
-          <li><a href="index.html"    class="nav-link">Home</a></li>
-          <!-- aria-current="page" marks THIS page as active -->
-          <li><a href="about.html"    class="nav-link active" aria-current="page">About</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
-          <li><a href="contact.html"  class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
-        <span class="theme-icon" aria-hidden="true">🌙</span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main-content" tabindex="-1">
-
-    <!-- ─────────────────────────────────────────
-         PAGE HERO / BREADCRUMB
-         ───────────────────────────────────────── -->
-    <section class="page-hero" aria-labelledby="page-hero-heading">
-      <div class="container">
-        <!-- Breadcrumb navigation — WCAG 2.4.8 -->
-        <nav aria-label="Breadcrumb" class="breadcrumb">
-          <ol role="list">
-            <li><a href="index.html">Home</a></li>
-            <li aria-current="page">About</li>
-          </ol>
-        </nav>
-        <h1 id="page-hero-heading">About Me</h1>
-        <p class="page-hero-subtitle">Developer · Designer · Accessibility Advocate</p>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────
-         BIO SECTION — two-column layout with <aside>
-         ───────────────────────────────────────── -->
-    <section class="about-bio" aria-labelledby="bio-heading">
-      <div class="container about-layout">
-
-        <!-- Main biography text -->
-        <div class="bio-text">
-          <h2 id="bio-heading">Hello, world! 👋</h2>
-
-          <p>
-            I'm <strong>Manojkumar</strong>, a front-end developer and UI/UX designer
-            with over six years of experience building products that are beautiful,
-            fast, and accessible to everyone — regardless of ability or device.
-          </p>
-
-          <p>
-            My journey started with a fascination for how the web works: the moment
-            I learned I could build something in a text editor and open it in a browser
-            was genuinely life-changing. Today, I specialise in translating complex
-            design systems into clean, maintainable code, and I'm deeply passionate
-            about WCAG compliance and inclusive design.
-          </p>
-
-          <p>
-            When I'm not writing code or pushing pixels, you'll find me hiking
-            trails around the Bay Area, contributing to open-source accessibility
-            projects, or perfecting my pour-over coffee technique.
-          </p>
-
-          <div class="bio-cta">
-            <a
-              href="assets/alex-morgan-resume.pdf"
-              class="btn btn-primary"
-              aria-label="Download Manojkumar's resume (PDF)"
-              download
-            >Download Résumé ↓</a>
-            <a href="contact.html" class="btn btn-outline">Let's Talk</a>
-          </div>
-        </div>
-
-        <!-- Supplementary info in <aside> -->
-        <aside class="bio-aside" aria-labelledby="quick-facts-heading">
-          <h2 id="quick-facts-heading" class="aside-title">Quick Facts</h2>
-          <dl class="quick-facts">
-            <!-- <dl> (definition list) is semantically correct for key-value pairs -->
-            <div class="fact-item">
-              <dt>📍 Location</dt>
-              <dd>India</dd>
-            </div>
-            <div class="fact-item">
-              <dt>💼 Experience</dt>
-              <dd>2+ Years</dd>
-            </div>
-            <div class="fact-item">
-              <dt>🎓 Education</dt>
-              <dd>B.Tech. Information Technology</dd>
-            </div>
-            <div class="fact-item">
-              <dt>🌐 Languages</dt>
-              <dd>English</dd>
-            </div>
-            <div class="fact-item">
-              <dt>📧 Email</dt>
-              <dd><a href="mailto:manojkumar210807@gmail.com">manojkumar210807@gmail.com</a></dd>
-            </div>
-            <div class="fact-item">
-              <dt>✅ Availability</dt>
-              <dd>Open to opportunities</dd>
-            </div>
-          </dl>
-        </aside>
-
-      </div><!-- /.about-layout -->
-    </section>
-
-    <!-- ─────────────────────────────────────────
-         EDUCATION SECTION
-         Uses <article> for each qualification —
-         each is self-contained and could stand alone.
-         ───────────────────────────────────────── -->
-    <section class="education" aria-labelledby="education-heading">
-      <div class="container">
-
-        <h2 id="education-heading" class="section-title">Education</h2>
-
-        <div class="timeline" role="list">
-
-          <article class="timeline-item" role="listitem" aria-labelledby="edu1-title">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <time datetime="2015-09/2019-06" class="timeline-date">Sept 2024 - June 2028</time>
-                <span class="timeline-badge">Degree</span>
-              </div>
-              <h3 id="edu1-title" class="timeline-title">B.Tech. Information Technology</h3>
-              <p class="timeline-org">University of California, Berkeley</p>
-              <p class="timeline-desc">
-                Graduated with First Class Honours. Specialised in human-computer
-                interaction and web systems. Thesis: <em>"Automated WCAG Auditing
-                in Component-Based Frameworks."</em>
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline-item" role="listitem" aria-labelledby="edu2-title">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <time datetime="2020-01/2020-06" class="timeline-date">Jan – June 2025</time>
-                <span class="timeline-badge">Certification</span>
-              </div>
-              <h3 id="edu2-title" class="timeline-title">Google UX Design Certificate</h3>
-              <p class="timeline-org">Google / Coursera</p>
-              <p class="timeline-desc">
-                Completed six-course programme covering user research, wireframing,
-                prototyping, and usability testing with Figma.
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline-item" role="listitem" aria-labelledby="edu3-title">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <time datetime="2021-03/2021-05" class="timeline-date">Mar – May 2025</time>
-                <span class="timeline-badge">Certification</span>
-              </div>
-              <h3 id="edu3-title" class="timeline-title">IAAP CPACC Certification</h3>
-              <p class="timeline-org">International Assoc. of Accessibility Professionals</p>
-              <p class="timeline-desc">
-                Certified Professional in Accessibility Core Competencies —
-                demonstrating mastery of WCAG, ARIA, and accessible design principles.
-              </p>
-            </div>
-          </article>
-
-        </div><!-- /.timeline -->
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────
-         WORK EXPERIENCE SECTION
-         ───────────────────────────────────────── -->
-    <section class="experience" aria-labelledby="experience-heading">
-      <div class="container">
-
-        <h2 id="experience-heading" class="section-title">Work Experience</h2>
-
-        <div class="timeline" role="list">
-
-          <article class="timeline-item" role="listitem" aria-labelledby="exp1-title">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <time datetime="2022-07" class="timeline-date">July 2022 – Present</time>
-                <span class="timeline-badge current">Current</span>
-              </div>
-              <h3 id="exp1-title" class="timeline-title">Senior Front-End Engineer</h3>
-              <p class="timeline-org">Nexlify · India, CA (Remote)</p>
-              <ul class="timeline-achievements" aria-label="Key achievements at Nexlify">
-                <li>Led accessibility overhaul — raised Lighthouse a11y score from 61 to 98.</li>
-                <li>Built a token-based design system adopted by 12 product teams.</li>
-                <li>Reduced LCP by 42% via code splitting, lazy loading, and CDN optimisation.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item" role="listitem" aria-labelledby="exp2-title">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-meta">
-                <time datetime="2019-07/2022-06" class="timeline-date">July 2019 – June 2022</time>
-                <span class="timeline-badge">Previous</span>
-              </div>
-              <h3 id="exp2-title" class="timeline-title">Front-End Developer</h3>
-              <p class="timeline-org">GreenWave Technologies · Oakland, CA</p>
-              <ul class="timeline-achievements" aria-label="Key achievements at GreenWave">
-                <li>Built the EcoTrack SaaS platform from prototype to production (50k+ users).</li>
-                <li>Introduced component-driven development with Storybook.</li>
-                <li>Mentored two junior developers, growing the front-end team from 2 to 5.</li>
-              </ul>
-            </div>
-          </article>
-
-        </div><!-- /.timeline -->
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────
-         VALUES / INTERESTS — stat cards
-         ───────────────────────────────────────── -->
-    <section class="values" aria-labelledby="values-heading">
-      <div class="container">
-        <h2 id="values-heading" class="section-title">By the Numbers</h2>
-        <div class="stats-grid" role="list">
-          <div class="stat-card" role="listitem">
-            <span class="stat-number" aria-label="6 years of experience">6+</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-card" role="listitem">
-            <span class="stat-number" aria-label="40 projects completed">40+</span>
-            <span class="stat-label">Projects Shipped</span>
-          </div>
-          <div class="stat-card" role="listitem">
-            <span class="stat-number" aria-label="25 happy clients">25+</span>
-            <span class="stat-label">Happy Clients</span>
-          </div>
-          <div class="stat-card" role="listitem">
-            <span class="stat-number" aria-label="3 open source contributions">3k+</span>
-            <span class="stat-label">GitHub Contributions</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Shared footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-brand">
+    <!-- Shared header (same structure as index.html) -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
         <a href="index.html" class="logo" aria-label="Manojkumar — home">
           <span aria-hidden="true">MK</span>
-          <span class="logo-text">Manojkumar</span>
+          <span class="-text">Manojkumar</span>
         </a>
-        <p class="footer-tagline">Building accessible web experiences, one component at a time.</p>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Open navigation menu"
+          >
+            <span class="hamburger-bar" aria-hidden="true"></span>
+            <span class="hamburger-bar" aria-hidden="true"></span>
+            <span class="hamburger-bar" aria-hidden="true"></span>
+          </button>
+          <ul id="nav-menu" class="nav-list" role="list">
+            <li><a href="index.html"    class="nav-link">Home</a></li>
+            <!-- aria-current="page" marks THIS page as active -->
+            <li><a href="about.html"    class="nav-link active" aria-current="page">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html"  class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <ul role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-social">
-        <h3 class="footer-section-title">Connect</h3>
-        <ul role="list" class="social-list">
-          <li><a href="[github.com](https://github.com/alexmorgan)"    class="social-link" aria-label="GitHub (opens in new tab)"   target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="[linkedin.com](https://linkedin.com/in/alexmorgan)" class="social-link" aria-label="LinkedIn (opens in new tab)" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="[twitter.com](https://twitter.com/alexmorgan_dev)" class="social-link" aria-label="Twitter/X (opens in new tab)" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p><small>&copy; <span id="current-year"></span> Manojkumar. All rights reserved.</small></p>
-      </div>
-    </div>
-  </footer>
+    </header>
 
-  <script src="js/script.js" defer></script>
-</body>
-</html>
+    <main id="main-content" tabindex="-1">
+
+      <!-- ─────────────────────────────────────────
+          PAGE HERO / BREADCRUMB
+          ───────────────────────────────────────── -->
+      <section class="page-hero" aria-labelledby="page-hero-heading">
+        <div class="container">
+          <!-- Breadcrumb navigation — WCAG 2.4.8 -->
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ol role="list">
+              <li><a href="index.html">Home</a></li>
+              <li aria-current="page">About</li>
+            </ol>
+          </nav>
+          <h1 id="page-hero-heading">About Me</h1>
+          <p class="page-hero-subtitle">Developer · Designer · Accessibility Advocate</p>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────
+          BIO SECTION — two-column layout with <aside>
+          ───────────────────────────────────────── -->
+      <section class="about-bio" aria-labelledby="bio-heading">
+        <div class="container about-layout">
+
+          <!-- Main biography text -->
+          <div class="bio-text">
+            <h2 id="bio-heading">Hello, world! 👋</h2>
+
+            <p>
+              I'm <strong>Manojkumar</strong>, a front-end developer and UI/UX designer
+              with over six years of experience building products that are beautiful,
+              fast, and accessible to everyone — regardless of ability or device.
+            </p>
+
+            <p>
+              My journey started with a fascination for how the web works: the moment
+              I learned I could build something in a text editor and open it in a browser
+              was genuinely life-changing. Today, I specialise in translating complex
+              design systems into clean, maintainable code, and I'm deeply passionate
+              about WCAG compliance and inclusive design.
+            </p>
+
+            <p>
+              When I'm not writing code or pushing pixels, you'll find me hiking
+              trails around the Bay Area, contributing to open-source accessibility
+              projects, or perfecting my pour-over coffee technique.
+            </p>
+
+            <div class="bio-cta">
+              <a
+                href="assets/alex-morgan-resume.pdf"
+                class="btn btn-primary"
+                aria-label="Download Manojkumar's resume (PDF)"
+                download
+              >Download Résumé ↓</a>
+              <a href="contact.html" class="btn btn-outline">Let's Talk</a>
+            </div>
+          </div>
+
+          <!-- Supplementary info in <aside> -->
+          <aside class="bio-aside" aria-labelledby="quick-facts-heading">
+            <h2 id="quick-facts-heading" class="aside-title">Quick Facts</h2>
+            <dl class="quick-facts">
+              <!-- <dl> (definition list) is semantically correct for key-value pairs -->
+              <div class="fact-item">
+                <dt>📍 Location</dt>
+                <dd>India</dd>
+              </div>
+              <div class="fact-item">
+                <dt>💼 Experience</dt>
+                <dd>2+ Years</dd>
+              </div>
+              <div class="fact-item">
+                <dt>🎓 Education</dt>
+                <dd>B.Tech. Information Technology</dd>
+              </div>
+              <div class="fact-item">
+                <dt>🌐 Languages</dt>
+                <dd>English</dd>
+              </div>
+              <div class="fact-item">
+                <dt>📧 Email</dt>
+                <dd><a href="mailto:manojkumar210807@gmail.com">manojkumar210807@gmail.com</a></dd>
+              </div>
+              <div class="fact-item">
+                <dt>✅ Availability</dt>
+                <dd>Open to opportunities</dd>
+              </div>
+            </dl>
+          </aside>
+
+        </div><!-- /.about-layout -->
+      </section>
+
+      <!-- ─────────────────────────────────────────
+          EDUCATION SECTION
+          Uses <article> for each qualification —
+          each is self-contained and could stand alone.
+          ───────────────────────────────────────── -->
+      <section class="education" aria-labelledby="education-heading">
+        <div class="container">
+
+          <h2 id="education-heading" class="section-title">Education</h2>
+
+          <div class="timeline" role="list">
+
+            <article class="timeline-item" role="listitem" aria-labelledby="edu1-title">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time datetime="2015-09/2019-06" class="timeline-date">Sept 2024 - June 2028</time>
+                  <span class="timeline-badge">Degree</span>
+                </div>
+                <h3 id="edu1-title" class="timeline-title">B.Tech. Information Technology</h3>
+                <p class="timeline-org">University of California, Berkeley</p>
+                <p class="timeline-desc">
+                  Graduated with First Class Honours. Specialised in human-computer
+                  interaction and web systems. Thesis: <em>"Automated WCAG Auditing
+                  in Component-Based Frameworks."</em>
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item" role="listitem" aria-labelledby="edu2-title">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time datetime="2020-01/2020-06" class="timeline-date">Jan – June 2025</time>
+                  <span class="timeline-badge">Certification</span>
+                </div>
+                <h3 id="edu2-title" class="timeline-title">Google UX Design Certificate</h3>
+                <p class="timeline-org">Google / Coursera</p>
+                <p class="timeline-desc">
+                  Completed six-course programme covering user research, wireframing,
+                  prototyping, and usability testing with Figma.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item" role="listitem" aria-labelledby="edu3-title">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time datetime="2021-03/2021-05" class="timeline-date">Mar – May 2025</time>
+                  <span class="timeline-badge">Certification</span>
+                </div>
+                <h3 id="edu3-title" class="timeline-title">IAAP CPACC Certification</h3>
+                <p class="timeline-org">International Assoc. of Accessibility Professionals</p>
+                <p class="timeline-desc">
+                  Certified Professional in Accessibility Core Competencies —
+                  demonstrating mastery of WCAG, ARIA, and accessible design principles.
+                </p>
+              </div>
+            </article>
+
+          </div><!-- /.timeline -->
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────
+          WORK EXPERIENCE SECTION
+          ───────────────────────────────────────── -->
+      <section class="experience" aria-labelledby="experience-heading">
+        <div class="container">
+
+          <h2 id="experience-heading" class="section-title">Work Experience</h2>
+
+          <div class="timeline" role="list">
+
+            <article class="timeline-item" role="listitem" aria-labelledby="exp1-title">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time datetime="2022-07" class="timeline-date">July 2022 – Present</time>
+                  <span class="timeline-badge current">Current</span>
+                </div>
+                <h3 id="exp1-title" class="timeline-title">Senior Front-End Engineer</h3>
+                <p class="timeline-org">Nexlify · India, CA (Remote)</p>
+                <ul class="timeline-achievements" aria-label="Key achievements at Nexlify">
+                  <li>Led accessibility overhaul — raised Lighthouse a11y score from 61 to 98.</li>
+                  <li>Built a token-based design system adopted by 12 product teams.</li>
+                  <li>Reduced LCP by 42% via code splitting, lazy loading, and CDN optimisation.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item" role="listitem" aria-labelledby="exp2-title">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <time datetime="2019-07/2022-06" class="timeline-date">July 2019 – June 2022</time>
+                  <span class="timeline-badge">Previous</span>
+                </div>
+                <h3 id="exp2-title" class="timeline-title">Front-End Developer</h3>
+                <p class="timeline-org">GreenWave Technologies · Oakland, CA</p>
+                <ul class="timeline-achievements" aria-label="Key achievements at GreenWave">
+                  <li>Built the EcoTrack SaaS platform from prototype to production (50k+ users).</li>
+                  <li>Introduced component-driven development with Storybook.</li>
+                  <li>Mentored two junior developers, growing the front-end team from 2 to 5.</li>
+                </ul>
+              </div>
+            </article>
+
+          </div><!-- /.timeline -->
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────
+          VALUES / INTERESTS — stat cards
+          ───────────────────────────────────────── -->
+      <section class="values" aria-labelledby="values-heading">
+        <div class="container">
+          <h2 id="values-heading" class="section-title">By the Numbers</h2>
+          <div class="stats-grid" role="list">
+            <div class="stat-card" role="listitem">
+              <span class="stat-number" aria-label="2 years of experience">2+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card" role="listitem">
+              <span class="stat-number" aria-label="2 projects completed">2+</span>
+              <span class="stat-label">Projects Shipped</span>
+            </div>
+            <div class="stat-card" role="listitem">
+              <span class="stat-number" aria-label="2 happy clients">2</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-card" role="listitem">
+              <span class="stat-number" aria-label="3 open source contributions">3k+</span>
+              <span class="stat-label">GitHub Contributions</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Shared footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Manojkumar — home">
+            <span aria-hidden="true">MK</span>
+            <span class="logo-text">Manojkumar</span>
+          </a>
+          <p class="footer-tagline">Building accessible web experiences, one component at a time.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-social">
+          <h3 class="footer-section-title">Connect</h3>
+          <ul role="list" class="social-list">
+            <li><a href="[github.com](https://github.com/alexmorgan)"    class="social-link" aria-label="GitHub (opens in new tab)"   target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="[linkedin.com](https://linkedin.com/in/alexmorgan)" class="social-link" aria-label="LinkedIn (opens in new tab)" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="[twitter.com](https://twitter.com/alexmorgan_dev)" class="social-link" aria-label="Twitter/X (opens in new tab)" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p><small>&copy; <span id="current-year"></span> Manojkumar. All rights reserved.</small></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+  </html>                           
